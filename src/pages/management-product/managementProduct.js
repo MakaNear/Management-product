@@ -15,6 +15,9 @@ export async function main() {
     .then(() => {
       smoothScroll();
       dataproduct();
+      console.log(url.components.topbar + "topbar.html");
+      console.log(url.components.sidebar + "sidebar.html");
+      console.log(url.pages.managementProduct + "product/product.html");
     })
     .catch((error) => {
       console.error("Error loading components:", error);

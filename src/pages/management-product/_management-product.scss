@@ -1,14 +1,16 @@
 @use "../../helpers/mixins" as m;
 @use "../../helpers/variables" as v;
+@use "./table/product" as tableProduct;
 
-.dashboard {
+.management-product {
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
     "sidebar topbar"
-    "sidebar main";
+    "sidebar main"
+    "footer footer";
 
   .topbar {
     grid-area: topbar;
@@ -23,5 +25,10 @@
     padding: v.$py-content v.$px-layout;
     width: 100%;
     min-height: 100vh;
+    @include tableProduct.tableProduct();
+  }
+
+  .footer{
+    grid-area: footer;
   }
 }

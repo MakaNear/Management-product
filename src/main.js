@@ -8,20 +8,20 @@ import { url } from "./helpers/urlConfig.js";
 function getURLContentHTML() {
   let hashlink = getHash();
   switch (hashlink) {
-    case "management-product":
-      return url.pages.management_product + "management-product.html";
+    case "managementProduct":
+      return url.pages.managementProduct + "management-product.html";
     default:
-      return url.pages.management_product + "management-product.html";
+      return url.pages.managementProduct + "management-product.html";
   }
 }
 
 function getURLContentJS() {
   let hashlink = getHash();
   switch (hashlink) {
-    case "management-product":
-      return url.pages.management_product + "managementProduct.js";
+    case "managementProduct":
+      return url.pages.managementProduct + "managementProduct.js";
     default:
-      return url.pages.management_product + "managementProduct.js";
+      return url.pages.managementProduct + "managementProduct.js";
   }
 }
 

@@ -16,6 +16,6 @@ export const url = {
     footer: folder.components + "footer/"
   },
   pages: {
-    management_product: folder.pages + "management-product/",
+    managementProduct: folder.pages + "management-product/",
   },
 };

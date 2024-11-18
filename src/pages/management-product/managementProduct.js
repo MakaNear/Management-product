@@ -1,21 +1,18 @@
 import loadComponent from "/src/helpers/loadComponent.js";
-import sidebarTogle from "/src/components/sidebar/sidebar.js";
-import smoothScroll from "/src/helpers/smoothScroll.js";
-import dataproduct from "/src/pages/management-product/product/table-product/dataproduct.js"
+import { smoothScroll } from "/src/helpers/smoothScroll.js";
+import { url } from "/src/helpers/urlConfig.js";
+import  dataproduct  from "/src/pages/management-product/table/dataproduct.js";
 
-export default function loadManagementProductCategories() {
+export async function main() {
   const promises = [
-    loadComponent("aside.sidebar", "/src/components/sidebar/sidebar.html"),
-    loadComponent("header.topbar", "/src/components/topbar/topbar.html"),
-    loadComponent(
-      "main.management-product section.content",
-      "/src/pages/management-product/table-product/table-product.html"
-    ),
+    loadComponent("header.topbar", url.components.topbar + "topbar.html"),
+    loadComponent("aside.sidebar", url.components.sidebar + "sidebar.html"),
+    loadComponent(".management-product .content", url.pages.managementProduct + "table/product.html"),
+    loadComponent("footer.footer", url.components.footer + "footer.html"),
   ];
 
   Promise.all(promises)
     .then(() => {
-      sidebarTogle();
       smoothScroll();
       dataproduct();
     })

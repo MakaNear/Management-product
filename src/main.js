@@ -8,7 +8,7 @@ import { url } from "./helpers/urlConfig.js";
 function getURLContentHTML() {
   let hashlink = getHash();
   switch (hashlink) {
-    case "managementProduct":
+    case "Management-product":
       return url.pages.managementProduct + "management-product.html";
     default:
       return url.pages.managementProduct + "management-product.html";
@@ -18,7 +18,7 @@ function getURLContentHTML() {
 function getURLContentJS() {
   let hashlink = getHash();
   switch (hashlink) {
-    case "managementProduct":
+    case "Management-product":
       return url.pages.managementProduct + "managementProduct.js";
     default:
       return url.pages.managementProduct + "managementProduct.js";
